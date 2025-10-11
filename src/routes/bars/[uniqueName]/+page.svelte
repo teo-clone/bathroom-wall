@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ActionData, PageData } from './$types';
 
-	import Tile from '$lib/components/Tile.svelte';
+	import PostThumb from '$lib/components/PostThumb.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import TileSeparator from '$lib/components/TileSeparator.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -33,7 +33,7 @@
 	</Modal>
 
 	{#each posts as post}
-		<Tile {post} />
+		<PostThumb {post} />
 	{/each}
 </div>
 

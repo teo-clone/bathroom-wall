@@ -7,10 +7,16 @@
 <TileSeparator />
 
 <div class="grid h-10 grid-cols-[140px_auto]">
-	<div class="logo flex bg-gray-800 text-xl font-bold">
-		<a class="text-white" href="/">bath</a>
-		<a class="bg-white text-black" href="/">wall</a>
-		<a class="text-white" href="/">.co</a>
+	<div class="logo group flex text-xl font-bold">
+		<a class="bg-black text-white group-hover:bg-white group-hover:text-black" href="/">
+			<span class="rotate-[4deg] group-hover:-rotate-[4deg]">bath</span>
+		</a>
+		<a class="bg-white text-black group-hover:bg-black group-hover:text-white" href="/">
+			<span class="-rotate-[4deg] group-hover:rotate-[4deg]">wall</span>
+		</a>
+		<a class="bg-black text-white group-hover:bg-white group-hover:text-black" href="/">
+			<span class="rotate-[4deg] group-hover:-rotate-[4deg]">.co</span>
+		</a>
 	</div>
 
 	<div class="flex items-center justify-end px-2">

@@ -29,25 +29,21 @@
 	}
 </script>
 
-<div class="relative aspect-square p-2">
-	<div class="flex h-full flex-col justify-between gap-1 p-1 text-left text-xs sm:text-sm">
-		{#if post.message}
-			<div
-				class={post.media
-					? 'absolute z-10 line-clamp-1 bg-white px-1'
-					: 'line-clamp-6 px-1 text-3xl'}
-			>
-				{post.message}
-			</div>
-		{/if}
+<div class="flex max-h-full max-w-[600px] flex-col gap-2 bg-white bg-opacity-90 p-4">
+	{#if post.media}
+		<PostMedia media={post.media} class="max-h-[70vh] w-full  object-contain" />
+	{/if}
 
-		{#if post.media}
-			<PostMedia media={post.media} />
-		{/if}
+	{#if post.message}
+		<div class="px-1 text-left text-sm">
+			{post.message}
+		</div>
+	{/if}
 
-		<div class="flex items-center justify-between text-xs">
+	<div class="w-full px-1">
+		<div class="flex w-full items-center justify-between text-xs">
 			<div class="flex gap-1">
-				# <p class="px-1 italic">{post.nickname}</p>
+				# <p class="px-1">{post.nickname}</p>
 			</div>
 			<p class="italic">{formatDate(post.date)}</p>
 		</div>

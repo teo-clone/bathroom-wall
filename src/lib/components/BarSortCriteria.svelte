@@ -66,14 +66,14 @@
 		on:click={() => {
 			getUserLocation().then((loc) => loc && goto(`/?lat=${loc.lat}&lng=${loc.lng}`));
 		}}
-		class={`p-2 ${sortByDistance ? 'bg-black text-white' : 'bg-white'}`}
+		class={`p-2 ${sortByDistance ? 'bg-black text-white' : 'bg-white hover:bg-gray-100'}`}
 	>
 		Close
 	</button>
 
 	<button
 		on:click={() => goto('/')}
-		class={`p-2 ${sortByDistance ? 'bg-white' : 'bg-black text-white'}`}
+		class={`p-2 ${sortByDistance ? 'bg-white hover:bg-gray-100' : 'bg-black text-white'}`}
 	>
 		Active
 	</button>
